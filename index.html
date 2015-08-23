@@ -2,8 +2,9 @@
 <meta charset="utf-8">
 <head>
 <title>Ashley and Eric Clambake Wedding</title>
-<link href='http://fonts.googleapis.com/css?family=Playfair+Display|Josefin+Sans:400,300italic|Quicksand:400,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic|Josefin+Sans:400,300italic,300,100|Quicksand:400,300|Lobster|Alegreya' rel='stylesheet' type='text/css'>
 <style>
+
 html { 
   background: url(assets/img/bg-min.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -11,7 +12,8 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
-#sidebar {
+
+#content {
 	margin-left:20%;
 	margin-top:80px;
 }
@@ -21,14 +23,81 @@ h1 {
 	font-style:italic;
 	font-weight:300;
 	font-size:60px;
+	margin-bottom:0px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
 }
-
+h4 {
+	color:white;
+	width:300px;
+	/*text-align: center;*/
+	font-family:"Alegreya";
+	font-weight:400;
+	/*font-style:italic;*/
+	font-size:22px;
+	padding-top:20px;
+	margin-bottom:0px;
+	padding-bottom:0px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+	padding-left:20px;
+	margin-top:0px;
+}
+ul {
+	list-style:none;
+	padding-left:20px;
+	width:300px;
+}
+li {
+	color:white;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-family:"Josefin Sans";
+	font-weight:300;
+	font-size:24px;
+	cursor:pointer;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+}
+li:hover {
+	color:rgb(200,200,200);
+}
+#columns {
+	margin-top:20px;
+}
+#navcol {
+	background-color: rgba(50,50,50,.6);
+	width:310px;
+	height:400px;
+	float:left;
+	margin-right:50px;
+	margin-bottom:20px;
+}
+#contentcol {
+	background-color: rgba(50,50,50,.6);
+	width:400px;
+	height:400px;
+	float:left;
+	display:none;
+}
 
 </style>
 </head>
 <body>
-	<div id="sidebar">
+	<div id="content">
 		<h1>Ashley & Eric</h1>
+		<div id="columns">
+			<div id="navcol">
+				<h4>June 11, 2016 :: Block Island</h4>
+				<ul id="navlist">
+					<li>:: Home</li>
+					<li>:: Where to stay</li>
+					<li>:: Getting there</li>
+				</ul>
+			</div>
+			<div id="contentcol">
+				<p>
+					Content goes in here.
+				</p>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
