@@ -2,7 +2,8 @@
 <meta charset="utf-8">
 <head>
 <title>Ashley and Eric Clambake Wedding</title>
-<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic|Josefin+Sans:400,300italic,300,100|Quicksand:400,300|Lobster|Alegreya' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300italic,300,|Alegreya' rel='stylesheet' type='text/css'>
+<script src="assets/libraries/jquery-1.8.3.min.js"></script>
 <style>
 
 html { 
@@ -59,6 +60,10 @@ li {
 li:hover {
 	color:rgb(200,200,200);
 }
+li.clicked {
+	color:rgb(200,200,200);
+}
+
 #columns {
 	margin-top:20px;
 }
@@ -73,12 +78,32 @@ li:hover {
 #contentcol {
 	background-color: rgba(50,50,50,.6);
 	width:400px;
-	height:400px;
+	min-height:400px;
 	float:left;
-	display:none;
+	visibility: hidden;
+}
+#contentbox {
+	color:white;
+	font-family:"Josefin Sans";
+	font-weight:300;
+	font-size:18px;
+	padding:20px;
+	margin-top:0px;
+	line-height:20px;
+}
+#more {
+	color:white;
+	font-family:"Josefin Sans";
+	font-weight:300;
+	font-size:18px;
+	font-style: italic;
+	padding:20px;
+	margin-top:0px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
 }
 
 </style>
+
 </head>
 <body>
 	<div id="content">
@@ -87,19 +112,52 @@ li:hover {
 			<div id="navcol">
 				<h4>June 11, 2016 :: Block Island</h4>
 				<ul id="navlist">
-					<li>:: Home</li>
-					<li>:: Where to stay</li>
-					<li>:: Getting there</li>
+					<li id="home">:: Home</li>
+					<li id="about">:: About Block Island</li>
+					<li id="travel">:: Getting there</li>
+					<li id="accommodation">:: Where to stay</li>
 				</ul>
+				<div id="more">More info to come!</div>
 			</div>
 			<div id="contentcol">
-				<p>
+				<p id="contentbox">
 					Content goes in here.
 				</p>
 			</div>
 		</div>
 	</div>
 </body>
+
+<script type="text/javascript"> 
+$(document).ready(function() {	
+
+	$("li").on("click", function() {
+		$("li").removeClass("clicked")
+		if ($(this).attr("id")==="home") {
+			$("#contentcol").css("visibility","hidden");
+		}
+		if ($(this).attr("id")==="about") {
+			$(this).addClass("clicked")
+			$("#contentbox").html("travel");
+			$("#contentcol").css("visibility","visible");
+		}
+		if ($(this).attr("id")==="travel") {
+			$(this).addClass("clicked")
+			$("#contentbox").html("travel");
+			$("#contentcol").css("visibility","visible");
+		}
+		if ($(this).attr("id")==="accommodation") {
+			$(this).addClass("clicked")
+			$("#contentbox").html(
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			);
+			$("#contentcol").css("visibility","visible");
+		}
+	});
+});
+
+
+</script>
 </html>
 <!-- 
 Sections
