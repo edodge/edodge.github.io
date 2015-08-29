@@ -7,7 +7,7 @@
 <style>
 
 html { 
-  background: url(assets/img/bg-min.jpg) no-repeat center center fixed; 
+  background: url(assets/img/bg-2000-min.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -68,7 +68,7 @@ li.clicked {
 	margin-top:20px;
 }
 #navcol {
-	background-color: rgba(50,50,50,.6);
+	background-color: rgba(50,50,50,.7);
 	width:310px;
 	height:400px;
 	float:left;
@@ -76,7 +76,7 @@ li.clicked {
 	margin-bottom:20px;
 }
 #contentcol {
-	background-color: rgba(50,50,50,.6);
+	background-color: rgba(50,50,50,.7);
 	width:400px;
 	min-height:400px;
 	float:left;
@@ -89,7 +89,11 @@ li.clicked {
 	font-size:18px;
 	padding:20px;
 	margin-top:0px;
-	line-height:20px;
+	line-height:24px;
+}
+
+#contentbox a, #contentbox a:visited {
+	color:white;
 }
 #more {
 	color:white;
@@ -100,6 +104,7 @@ li.clicked {
 	padding:20px;
 	margin-top:0px;
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+	display:none;
 }
 
 </style>
@@ -116,8 +121,8 @@ li.clicked {
 					<li id="about">:: About Block Island</li>
 					<li id="travel">:: Getting there</li>
 					<li id="accommodation">:: Where to stay</li>
+					<li id="registry">:: Registry</li>
 				</ul>
-				<div id="more">More info to come!</div>
 			</div>
 			<div id="contentcol">
 				<p id="contentbox">
@@ -143,14 +148,16 @@ $(document).ready(function() {
 		}
 		if ($(this).attr("id")==="travel") {
 			$(this).addClass("clicked")
-			$("#contentbox").html("travel");
+			$("#contentbox").html("For guests coming from the New England area we recommend getting to Block Island via the <a href='http://www.blockislandferry.com/' target='_blank'>Block Island Ferry</a> from Point Judith, RI. Ferries are also available from Fall River, MA, Newport, RI, New London, CT, and Montauk, NY. <br><br>For guests coming from further away we recommend taking a <a href='https://www.capeair.com/' target='_blank'>short flight</a> to Block Island from Providence TF Green Airport. <br><br>While cars are allowed on the island (make sure to reserve your ferry berth at least 6 months in advance!), bikes and scooters are a great option for getting around during your stay. The wedding venue is a 20 minute walk from the main port area.<br><br>You can find additional travel information <a href='http://wikitravel.org/en/Block_Island' target='_blank'>here</a>."); 
 			$("#contentcol").css("visibility","visible");
 		}
 		if ($(this).attr("id")==="accommodation") {
 			$(this).addClass("clicked")
-			$("#contentbox").html(
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-			);
+			$("#contentbox").html("We have rooms held at four different locations, all situated on Dodge Street, near the Old Port. Each property has rooms at a range of prices. <br><br> Please note that during high season on Block Island all accommodations have a two night minimum. Room blocks are reserved for Friday, June 10 and Saturday, June 11. <br><br> <a href='http://dariusblockisland.com/' target='_blank'><strong>Darius Inn</strong></a> <br> 11 rooms <br> <i>Only held until mid-October</i> <br> Funky B&B with great communal spaces, recommended for friends of the bride and groom. <br><br> <a href='http://blockislandinns.com/accommodation-type/blue-dory-inn/' target='_blank'><strong>Blue Dory Inn</strong></a> <br> 11 rooms (whole place) <br> Victorian-style B&B <br><br> <a href='http://blockislandinns.com/accommodation-type/avonlea/' target='_blank'><strong>Avonlea</strong></a> <br> 9 rooms <br> Beach House B&B, rooms reserved separately <br> No children under 16 <br><br> <a href='http://thegothicinn.com/' target='_blank'><strong>Gothic Inn</strong></a> <br> 9 room B&B <br><br> All the properties listed also have apartments or cottages not reserved in our room blocks, a great option for those looking for more privacy or space. "); $("#contentcol").css("visibility","visible"); //
+		}
+		if ($(this).attr("id")==="registry") {
+			$(this).addClass("clicked")
+			$("#contentbox").html("Coming soon!");
 			$("#contentcol").css("visibility","visible");
 		}
 	});
@@ -162,7 +169,14 @@ $(document).ready(function() {
 <!-- 
 Sections
 
+12 miles off the coast of Rhode Island
+32 miles of trails
+17 miles of public coastline
+40 restaurants and pubs
+250 foot high coastal cliffs
 
-
+Mohegan Bluffs
+Explore the island on a moped
+Three Sisters
 
  -->
